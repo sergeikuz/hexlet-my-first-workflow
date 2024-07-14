@@ -11,7 +11,8 @@ jobs:
     steps: # список шагов, которые надо выполнить
       # экшен - выполняет какую-то задачу
       # checkout - клонирует репозиторий
-      - uses: actions/ckeckout@v3
+      # make say-hello - выводит на экран 'Hello, world!'
+      - uses: actions/make say-hello
       # run - произвольная bash-команда
-      # echo 'Hello, World!' печатает на экран 'Hello, World'
+      # echo 'Hello, World!' печатает на экран 'Hello, World!'
       - run: echo "Hello, World!"
