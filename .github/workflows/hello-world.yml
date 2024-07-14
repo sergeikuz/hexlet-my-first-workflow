@@ -17,3 +17,4 @@ jobs:
       # echo 'Hello, World!' печатает на экран 'Hello, World!'
       - run: make say-hello
       - run: echo 'Done!'
+      - run: make booo
