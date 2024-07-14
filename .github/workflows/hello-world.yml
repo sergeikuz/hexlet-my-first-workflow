@@ -16,3 +16,4 @@ jobs:
       # run - произвольная bash-команда
       # echo 'Hello, World!' печатает на экран 'Hello, World!'
       - run: make say-hello
+      - run: echo 'Done!'
