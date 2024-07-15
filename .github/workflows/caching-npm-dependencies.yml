@@ -1,0 +1,23 @@
+# file: .github/workflows/caching-npm-dependencies.yml
+name: caching-npm-dependencies.yml
+# on – определяет события, которые запускают воркфлоу
+on: push
+# Пример для проекта на Node.js
+jobs:
+  build: # имя взято для примера
+    runs-on: ubuntu-latest
+
+    steps:
+      # Клонируем репозиторий
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci
+      - name: Hello Wor
+        run: make say-hello
+      # Запускаем тесты
+      # у шагов может быть имя, иногда это помогает отладке
+      # имя выводится на Github при просмотре сборки
+      # name и run относятся к одной задаче, поэтому дефис ставится только перед name
